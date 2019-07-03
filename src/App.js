@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import StationList from "./components/StationList";
+import Selector from "./components/ui/Select.jsx";
 
+/**
+ * Renders the entry point App component
+ * @returns {JSX} App Component
+ */
 function App() {
+  const [selectedDistance, setSelectedDistance] = useState(1);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <span>Gas Price App</span>
       </header>
-    </div>
+      <main className="container">
+        <div className="controls">
+          <h1>Gas Stations Near You</h1>
+          <Selector
+            setSelectedDistance={setSelectedDistance}
+            value={selectedDistance}
+          />
+        </div>
+        <StationList selectedDistance={selectedDistance} />
+      </main>
+    </>
   );
 }
 
