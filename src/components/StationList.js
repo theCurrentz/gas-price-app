@@ -43,6 +43,7 @@ const StationList = props => {
   async function getStations(ev) {
     if ((!ev.key || ev.key === "enter") && !isLoading) {
       setIsLoading(true);
+      setScrollIndex(12);
       try {
         setStations(await getGasStations(selectedDistance));
       } catch (err) {

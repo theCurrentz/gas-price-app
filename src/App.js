@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import StationList from "./components/StationList";
 import Selector from "./components/ui/Select.jsx";
-
+import Container from "./components/ui/Container.jsx";
 /**
  * Renders the entry point App component
  * @returns {JSX} App Component
@@ -13,7 +13,7 @@ function App() {
       <header>
         <span>Gas Price App</span>
       </header>
-      <main className="container">
+      <Container>
         <div className="controls">
           <h1>Gas Stations Near You</h1>
           <Selector
@@ -22,7 +22,7 @@ function App() {
           />
         </div>
         <StationList selectedDistance={selectedDistance} />
-      </main>
+      </Container>
     </>
   );
 }

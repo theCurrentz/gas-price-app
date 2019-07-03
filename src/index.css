@@ -18,3 +18,68 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+h1 {
+  margin: 0px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+@media (max-width: 424px) {
+  h1 {
+    font-size: 1.52rem;
+    margin-bottom: 16px;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 25vh;
+  margin: 0px auto;
+  padding: 32px;
+}
+
+header span {
+  color: white;
+  font-size: 2.32rem;
+  font-weight: 800;
+  letter-spacing: 0.054em;
+  text-shadow: 0px 0px 24px rgba(0, 0, 0, 0.24);
+  margin: 0px;
+}
+
+button {
+  position: fixed;
+  align-self: center;
+  justify-self: flex-end;
+  bottom: 40px;
+  color: white;
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.32rem;
+  text-shadow: 0px 0px 1.18rem rgba(0, 0, 0, 0.25);
+  width: 88%;
+  max-width: 424px;
+  margin: 0px auto;
+  border: 0;
+  padding: 20px 36px;
+  cursor: pointer;
+  border-radius: 36px;
+  background: linear-gradient(155deg, #8e2de2, #4a00e0);
+  box-shadow: 0px 2px 60px -16px black;
+  transition: transform 0.17s;
+  filter: saturate(1.42);
+}
+@media (max-width: 424px) {
+  button {
+    width: 76%;
+  }
+}
+button:hover {
+  transform: scale(0.96);
+}
+button:focus {
+  outline: none;
+}
